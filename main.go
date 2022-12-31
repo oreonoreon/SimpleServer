@@ -9,7 +9,7 @@ func main() {
 	var port string
 	port = "80"
 
-	http.HandleFunc("/home", func(w http.ResponseWriter, request *http.Request) {
+	http.HandleFunc("/", func(w http.ResponseWriter, request *http.Request) {
 		io.WriteString(w, "Hello, world!\n")
 	})
 	http.ListenAndServe(":"+port, nil)
